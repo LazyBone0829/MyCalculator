@@ -1,0 +1,287 @@
+﻿<Controls:MetroWindow
+    x:Class="WpfApp5.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfApp5"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="计算器"
+    Width="440"
+    Height="600"
+    mc:Ignorable="d">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="1.1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Menu
+            Grid.ColumnSpan="6"
+            Width="442"
+            Height="30"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top">
+            <MenuItem FontSize="15" Header="编辑">
+                <MenuItem
+                    Click="MenuItem_save_Click"
+                    FontSize="15"
+                    Header="保存历史记录" />
+            </MenuItem>
+            <MenuItem FontSize="15" Header="主题">
+                <MenuItem
+                    Click="MenuItem_lightthemeChange_Click"
+                    FontSize="15"
+                    Header="Light"
+                    />
+                <MenuItem
+                    Click="MenuItem_darkthemeChange_Click"
+                    FontSize="15"
+                    Header="Dark"/>
+            </MenuItem>
+
+
+        </Menu>
+        <Label
+            Name="label1"
+            Grid.Row="1"
+            Grid.ColumnSpan="4"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Content="0"
+            FontSize="40" />
+        <Button
+            Grid.Row="7"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="-1,0,107,0"
+            Content="±"
+            FontSize="30" Click="Button_opp_Click"/>
+        <Button
+            Grid.Row="7"
+            Grid.ColumnSpan="3"
+            Margin="107,0"
+            Click="Button_number_Click"
+            Content="0"
+            FontSize="30" />
+        <Button
+            Grid.Row="7"
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
+            Margin="107,0"
+            Click="Button_number_Click"
+            Content="."
+            FontSize="30" />
+        <Button
+            Grid.Row="7"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Margin="107,0,-1,0"
+            Click="Button_equ_Click"
+            Content="="
+            FontSize="30" />
+        <Button
+            Grid.Row="6"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Width="110"
+            Margin="-1,0,0,0"
+            HorizontalAlignment="Left"
+            Click="Button_number_Click"
+            Content="1"
+            FontSize="30" />
+        <Button
+            Grid.Row="6"
+            Grid.ColumnSpan="3"
+            Width="110"
+            Margin="107,0,0,0"
+            HorizontalAlignment="Left"
+            Click="Button_number_Click"
+            Content="2"
+            FontSize="30" />
+        <Button
+            Grid.Row="6"
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
+            Width="110"
+            Margin="107,0,0,0"
+            HorizontalAlignment="Left"
+            Click="Button_number_Click"
+            Content="3"
+            FontSize="30" />
+        <Button
+            Grid.Row="6"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Margin="107,0,-1,0"
+            Click="Button_flag_Click"
+            Content="+"
+            FontSize="30" />
+        <Button
+            Grid.Row="5"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Width="110"
+            Margin="-1,0,0,0"
+            HorizontalAlignment="Left"
+            Click="Button_number_Click"
+            Content="4"
+            FontSize="30" />
+        <Button
+            Grid.Row="5"
+            Grid.ColumnSpan="3"
+            Width="110"
+            Margin="107,0,0,0"
+            HorizontalAlignment="Left"
+            Click="Button_number_Click"
+            Content="5"
+            FontSize="30" />
+        <Button
+            Grid.Row="5"
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
+            Width="110"
+            Margin="107,0,0,0"
+            HorizontalAlignment="Left"
+            Click="Button_number_Click"
+            Content="6"
+            FontSize="30" />
+        <Button
+            Grid.Row="5"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Margin="107,0,-1,0"
+            Click="Button_flag_Click"
+            Content="-"
+            FontSize="30" />
+        <Button
+            Grid.Row="4"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Width="110"
+            Margin="-1,0,0,0"
+            HorizontalAlignment="Left"
+            Click="Button_number_Click"
+            Content="7"
+            FontSize="30" />
+        <Button
+            Grid.Row="4"
+            Grid.ColumnSpan="3"
+            Width="110"
+            Margin="107,0,0,0"
+            HorizontalAlignment="Left"
+            Click="Button_number_Click"
+            Content="8"
+            FontSize="30" />
+        <Button
+            Grid.Row="4"
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
+            Width="110"
+            Margin="107,0,0,0"
+            HorizontalAlignment="Left"
+            Click="Button_number_Click"
+            Content="9"
+            FontSize="30" />
+        <Button
+            Grid.Row="4"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Margin="107,0,-1,0"
+            Click="Button_flag_Click"
+            Content="×"
+            FontSize="30" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Width="110"
+            Margin="-1,0,0,0"
+            HorizontalAlignment="Left"
+            Content="CE"
+            FontSize="20" Click="Button_ce_Click"/>
+        <Button
+            Grid.Row="3"
+            Grid.ColumnSpan="3"
+            Width="110"
+            Margin="107,0,0,0"
+            HorizontalAlignment="Left"
+            Click="Button_clear_Click"
+            Content="C"
+            FontSize="20" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
+            Width="110"
+            Margin="107,0,0,0"
+            HorizontalAlignment="Left"
+            Click="Button_del_Click"
+            Content="DEL"
+            FontSize="20" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Margin="107,0,-1,0"
+            Click="Button_flag_Click"
+            Content="÷"
+            FontSize="30" />
+        <Button
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Width="110"
+            Height="76"
+            Margin="-1,0,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Content="%"
+            FontSize="25" Click="Button_flag_Click"/>
+        <Button
+            Grid.Row="2"
+            Grid.ColumnSpan="3"
+            Width="110"
+            Height="76"
+            Margin="107,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Content="√"
+            FontSize="25" Click="Button_sqrt_Click"/>
+        <Button
+            Grid.Row="2"
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
+            Width="110"
+            Margin="107,0"
+            HorizontalAlignment="Center"
+            Content="x²"
+            FontSize="25" Click="Button_squ_Click"/>
+        <Button
+            Grid.Row="2"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Height="76"
+            Margin="107,0,-1,0"
+            VerticalAlignment="Bottom"
+            Content="1／x"
+            FontSize="20" Click="Button_rec_Click"/>
+
+
+
+
+
+
+    </Grid>
+</Controls:MetroWindow>
